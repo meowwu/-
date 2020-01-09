@@ -1,0 +1,553 @@
+<style>
+@font-face {
+    font-family:ProximaNova-Semibold;
+    src:url('ProximaNovaSemibold.ttf');
+}
+@font-face {
+    font-family:ProximaNova-Regular;
+    src:url('ProximaNova-Regular.otf');
+}
+*{
+    box-sizing: border-box; 
+}
+a {  
+    text-decoration: none;
+    color:rgb(183,192,205);
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#nav {
+    float:left;
+    width : 100px;
+    height: 100vh;
+    background-color:rgb(29,37,49);
+}
+#nav .notifi {
+    overflow : hidden;      
+}
+#nav .noti {
+    float = left;
+}
+#nav .note {
+    float = left;
+    margin-left:10px;
+    margin-top:20px;
+}
+#nav .icon {
+    clear: left;
+    margin-left:20px;
+    margin-top:20px;
+    height:60px;
+    width:60px;
+}
+#nav .bottom {
+    position:absolute;
+    left:25px;
+    bottom:20px;
+}
+#nav .bottom-icon {
+    float:left;
+    margin-right:20px;
+}
+#sub-nav {
+    float:left;
+    width: 250px;
+    height: 100vh;
+    background-color:rgb(34,44,60);
+}
+#sub-nav .menu{
+    position:relative;
+    top:20px;
+    left:30px;
+    width:190px;
+    font-family:ProximaNova-Semibold;
+    font-size:12px;
+    color: rgb(91,103,121);
+}
+#sub-nav .menu-text {
+    float:left;
+}
+#sub-nav .menu-icon {
+    float: right;
+}
+#sub-nav .ulist {
+    position:relative;
+    top:35px;
+    color: rgb(183,192,205);
+    padding-left:30px;
+    font-family: ProximaNova-Semibold;
+    font-size:14px;
+}
+
+#sub-nav .list01 {
+    margin-top:12px;
+    clear:both;
+}
+#sub-nav .list03 {
+    margin-top:44px;
+    clear:both;
+}
+#sub-nav .notice {
+    clear:both;
+    margin-top:12px;
+    width:190px;
+}
+#sub-nav .list02 {
+    float: left;
+}
+#sub-nav .notice-icon {
+    float: right;
+}
+#sub-nav .border {
+    clear:both;
+    margin:0 30px;
+    margin-top:65px;
+    border-bottom: 0.5px solid;
+    border-color:rgb(91,103,121);
+}
+#sub-nav .icon02 {
+    float:left;
+}
+#sub-nav .list04 {
+    margin-left:30px;
+}
+#sub-nav .list05 {
+    clear:both;
+    margin-top:12px;
+}
+#sub-nav .border02 {
+    clear:both;
+    margin:0 30px;
+    margin-top:65px;
+    border-bottom: 0.5px solid;
+    border-color:rgb(91,103,121);
+}
+#sub-nav .list06 {
+    margin-top:15px;
+    clear:both;
+}
+#sub-nav .notifi {
+    float:left;
+    
+}
+#sub-nav .notice02 {
+    clear:both;
+    margin-top:12px;
+    width:190px;
+    position:relative;
+    top:35px;
+    color: rgb(183,192,205);
+    font-family: ProximaNova-Semibold;
+    font-size:14px;
+    width:220px;
+}
+#sub-nav .list07 {
+    float:left;
+    margin-left:20px;
+}
+#sub-nav .monthly {
+    position:absolute;
+    left:130px;
+    bottom:20px;
+    width:190px;
+}
+#sub-nav .monthly-text {
+    float:left;
+    font-family:ProximaNova-Semibold;
+    font-size:14px;
+    color:white;
+}
+#sub-nav .monthly-num {
+    font-family:ProximaNova-Semibold;
+    font-size:14px;
+    float:right;
+}
+#sub-nav .monthly-num01 {
+    color: white;
+    float: left;
+}
+#sub-nav .monthly-num02 {
+    color: rgb(91,103,121);
+    float: left;
+}
+#sub-nav .img01 {
+    margin-top:-10px;;
+    clear:both;
+}
+#message {
+    background-color:white;
+    margin-left:0px;
+    height:100vh;
+}
+#message .guide{
+    background-color:white;
+    z-index:1;
+    position:fixed;
+    height:80px;
+    width: calc(100% - 350px);
+    border:0.5px solid;
+    border-color:rgb(230,233,236);
+    margin-left:350px;
+}
+#message .guide-title {
+    float:left;
+    margin-left:30px;
+    line-height:80px;
+    font-family:ProximaNova-Semibold;
+    font-size:24px;
+    color:rgb(53,64,82);
+}
+#message .profiles {
+    margin-top:15px;
+    float:right;
+    margin-right:30px;
+}
+#message .avatar {
+    float:left;
+}
+#message .info {
+    margin-top:5px;
+    float:left;
+    margin-left:20px;
+}
+#message .uname {
+    font-family:ProximaNova-Semibold;
+    font-size:16px;
+    color: rgb(35,153,241);
+}
+#message .job {
+    font-family:ProximaNova-Semibold;
+    font-size:14px;
+    color: rgb(181,181,181);
+}
+#message .dropdown {
+    float:left;
+    margin-left:40px;
+    margin-top:20px;
+}
+#message .brief {
+    float:left;
+    width:400px;
+    height:100vh;
+}
+#message .search {
+    position:fixed;
+    border-right:0.5px solid;
+    border-bottom:0.5px solid;
+    border-color:rgb(230,233,236);
+    height:70px;
+    width:400px;
+    margin-top:80px;
+    background-color:white;
+}
+#message .search-bar {
+    z-index:1;
+    height:36px;
+    width:340px;
+    margin-left:30px;
+    border:1px gray solid;
+    border-radius:3px;
+    margin-top:18px;
+    
+}
+#message .search-text {
+    margin-left:20px;
+    line-height:36px;
+    float:left;
+    font-family:ProximaNova-Semibold;
+    font-size:14px;
+    color:rgb(159,169,186);
+}
+#message .search-icon {
+    margin-right:20px;
+    margin-top:10px;
+    float:right;
+}
+#message .brief-list {
+    z-index:0;
+    overflow:scroll;
+    padding-top:150px;
+    width:400px;
+    height:100vh;
+    border-right:0.5px solid;
+    border-color:rgb(230,233,236);
+}
+#message .brief-list::-webkit-scrollbar{
+    display: none;
+}
+#message .talk {
+    clear:both;
+    height:130px;
+    padding: 20px 20px 20px 30px;
+    border-bottom:0.5px solid;
+    border-color:rgb(230,233,236);
+}
+#message .talk02 {
+    width:380px;
+    float:right;
+    height:130px;
+    padding:20px 20px 20px 10px;
+    border-bottom:0.5px solid;
+    border-color:rgb(230,233,236);
+}
+#message .talk-con {
+    width:400px;
+    border-bottom:0.5px solid;
+    border-color:rgb(230,233,236);
+}
+#message .profiles02 {
+    width:340px;
+}
+#message .avatar02 {
+    float:left;
+}
+#message .info02 {
+    float:left;
+    margin-left:20px;
+}
+#message .uname02 {
+    margin-top:5px;
+    font-family:ProximaNova-Semibold;
+    font-size:16px;
+    color:rgb(88,93,104);
+}
+#message .uname03 {
+    float:left;
+    margin-top:5px;
+    margin-left:5px;
+    font-family:ProximaNova-Semibold;
+    font-size:16px;
+    color:rgb(88,93,104);
+}
+#message .source {
+    font-family:ProximaNova-Semibold;
+    font-size:14px;
+    color:rgb(181,181,181);
+}
+#message .source02 {
+    clear:both;
+}
+#message .time {
+    margin-top:8px;
+    font-family:ProximaNova-Semibold;
+    font-size:14px;
+    color: rgb(127,143,164);
+    float:right;
+}
+#message .talk-text {
+    padding-top:10px;
+    clear:both;
+    font-family:ProximaNova-Regular;
+    font-size:14px;
+    color:rgb(88,93,104);
+}
+#message .talk-text02{
+    float:left;
+    width:300px;
+}
+#message .act-bar {
+    float:left;
+    height:130px;
+    width:3px;
+}
+#message .sta-icon {
+    margin-top:10px;
+    float:left;
+}
+#message .notice-icon02 {
+    float:left;
+    margin-left:20px;
+    margin-top:15px;
+}
+
+#message .details {
+    margin-left:0px;
+}
+#message .name-bar {
+    position:fixed;
+    margin-left:750px;
+    border-right:0.5px solid;
+    border-bottom:0.5px solid;
+    border-color:rgb(230,233,236);
+    width: calc(100% - 750px);
+    height:70px;
+    margin-top:80px;
+    background-color:white;
+}
+#message .name02 {
+    line-height:70px;
+    float:left;
+    margin-left:30px;
+    font-family:ProximaNova-Semibold;
+    font-size:18px;
+}
+#message .nameitself {
+    float:left;
+    color:rgb(88,93,104);
+}
+#message .status02 {
+    float:left;
+    margin-left:10px;
+    margin-top:30px;
+}
+#message .settings {
+    float:right;
+    line-height:70px;
+    font-family:ProximaNova-Semibold;
+    font-size:14px;
+}
+#message .select {
+    float:left;
+    margin:20px 0px;
+    padding:0;
+}
+#message .line {
+    float:left;
+    margin:20px 10px;
+}
+#message .number {
+    float:left;
+    color:rgb(86,104,138);
+}
+#message .left {
+    float:left;
+    margin-top:20px;
+    margin-left:20px;
+}
+#message .right {
+    float:left;
+    margin:20px 0;
+    margin-right:20px;
+}
+#message .message-text {
+    z-index:0;
+    overflow:scroll;
+    padding-top:50px;
+    height:100vh;
+}
+#message .message-text::-webkit-scrollbar{
+    display: none;
+}
+#message .message-text01 {
+    clear:both;
+    padding-top:20px;
+    margin-left:30px;
+}
+#message .avatar03 {
+    float:left;
+}
+#message .message-details01 {
+    float:left;
+    width:calc(100% - 80px);
+    margin-left:30px;
+} 
+#message .name-bar02 {
+    font-family:ProximaNova-Semibold;
+    margin:0px;
+}
+#message .name03 {
+    float:left;
+    font-size:16px;
+    color:rgb(88,93,104);
+}
+#message .time02 {
+    float:left;
+    font-size:14px;
+    color:rgb(127,143,164);
+    margin-left:10px;
+}
+#message .text02 {
+    
+    clear:left;
+    font-family:ProximaNova-Regular;
+    font-size:14px;
+    color:rgb(88,93,104);
+    margin-top:30px;
+}
+#message .blank {
+    margin-top:100px;
+}
+#message .gap01{
+    margin-top:30px;
+    float:left;
+    border-bottom: 0.5px solid;
+    border-color:rgb(230,233,236);
+    width:340px;
+}
+#message .Tuesday {
+    margin-left:30px;
+    font-family:ProximaNova-Regular;
+    font-size:14px;
+    color:rgb(127,143,164);
+    margin-top:23px;
+    float:left;
+}
+#message .gap02{
+    margin-top:30px;
+    float:right;
+    margin-left:10px;
+    border-bottom: 0.5px solid;
+    border-color:rgb(230,233,236);
+    width:340px;
+}
+#message .view01 {
+    margin-top:20px;
+    margin-left:110px;
+}
+#message .view02 {
+    margin-top:20px;
+    margin-left:10px;
+}
+#message .gap03{
+    margin-top:35px;
+    float:left;
+    border-bottom: 0.5px solid;
+    border-color:rgb(35,153,241);
+    width:325px;
+}
+#message .gap04{
+    margin-top:35px;
+    float:right;
+    margin-left:10px;
+    border-bottom: 0.5px solid;
+    border-color:rgb(35,153,241);
+    width:323px;
+}
+#message .New-message {
+    margin-left:30px;
+    font-family:ProximaNova-Regular;
+    font-size:14px;
+    color:rgb(35,153,241);
+    margin-top:28px;
+    float:left;
+}
+#message .reply {
+    height:54px;
+    line-height:54px;
+    margin-top:80px;
+    margin-left:30px;
+    border: 0.5px solid;
+    border-color:rgb(230,233,236);
+    border-radius:3px;
+    margin-bottom:20px;
+    margin-right:20px;
+}
+#message .add-file {
+    float:left;
+}
+#message .text03 {
+    font-family:ProximaNova-Regular;
+    font-size:14px;
+    color:rgb(88,93,104);
+    float:left;
+    margin-left:20px;
+}
+#message .writing-icon {
+    float:left;
+    margin-left:20px;
+    margin-top:16px;
+}
+
+</style>
