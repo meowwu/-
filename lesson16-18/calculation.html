@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>ADD</title>
+</head>
+<body>        
+    <input id="first" type="number" value="0" placeholder="第一个数字">
+    <input id="second" type="number" value="0" placeholder="第二个数字">
+    <button id="add">加</button>
+    <button id="minus">减</button>
+    <button id="times">乘</button>
+    <button id="divide">除</button>
+    <p id="result">运算结果</p>
+    <script>
+    var fin;
+    add.onclick = function(){
+        fin = Number(document.getElementById("first").value) + Number(document.getElementById("second").value);
+        document.getElementById("result").innerHTML = fin;
+    }
+    minus.onclick = function(){
+        fin = Number(document.getElementById("first").value) - Number(document.getElementById("second").value);
+        document.getElementById("result").innerHTML = fin;
+    }
+    times.onclick = function(){
+        fin = Number(document.getElementById("first").value) * Number(document.getElementById("second").value);
+        document.getElementById("result").innerHTML = fin;
+    }
+    divide.onclick = function(){
+        if (Number(document.getElementById("second").value) == 0) {
+        alert("除数不能为0");
+    }
+        fin = Number(document.getElementById("first").value) / Number(document.getElementById("second").value);
+        document.getElementById("result").innerHTML = fin;
+    }
+    </script>
+</body>
+</html>
