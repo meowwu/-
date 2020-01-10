@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>School_Company</title>
+    <style>
+        select {
+            display: none;
+        }
+    </style>
+</head>
+<body>            
+    <label>
+        <input id="school" name="status" type="radio" onclick = "judgeRadioChecked()">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio" onclick = "judgeRadioChecked()">
+        Company
+    </label>
+
+    <select id="school-select">        
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">        
+        <option>百度</option>
+        <option>爱奇艺</option>        
+    </select>
+    <script>
+        function judgeRadioChecked(){
+            var list = document.getElementsByName("status");
+            if (list[0].checked){
+                document.getElementById("school-select").style.display= "block";
+                document.getElementById("company-select").style.display= "none";
+            }
+            else if (list[1].checked){
+                document.getElementById("company-select").style.display= "block";
+                document.getElementById("school-select").style.display= "none";
+                }
+        }
+    </script>
+    
+</body>
+</html>
