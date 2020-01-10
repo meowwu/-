@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>Greeting</title>
+</head>
+<body>
+    <div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+    <button id="fade" onclick = "select()">淡出</button>
+    <script>
+        var t,x;
+        document.getElementById("fade-obj").style.opacity = 1;
+        function select(){
+            if (document.getElementById("fade-obj").style.opacity == 1){
+                fadeaway();
+            }
+            else if (document.getElementById("fade-obj").style.opacity == 0) {
+                showup();
+            }
+        }
+        function fadeaway() {
+            
+            if (document.getElementById("fade-obj").style.opacity > 0 ){
+                t = setTimeout("fadeaway()",300);
+                document.getElementById("fade-obj").style.opacity -= 0.1;
+                fade.disabled = true;
+            }
+            else {
+                fade.disabled = false;
+                fade.innerHTML = "淡入";
+                clearTimeout(t);
+            }
+        }
+        function showup() {
+            if (document.getElementById("fade-obj").style.opacity < 1 ){
+                document.getElementById("fade-obj").style.opacity += 0.1;
+                x = setTimeout("showup()",300);
+                fade.disabled = true;
+            }
+            else {
+                fade.disabled = false;
+                fade.innerHTML = "淡出";
+                clearTimeout(x);
+            }
+        }
+    </script>
+</body>
+</html>
