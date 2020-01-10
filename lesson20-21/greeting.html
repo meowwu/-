@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>Greeting</title>
+</head>
+<body>
+    <input id="name" type="text">    
+    <button id="submit-btn" onclick = "print()">Submit</button>
+    <script>
+        function print(){
+            alert("hello! "+ document.getElementById("name").value);
+        }
+        document.onkeydown = function(){
+            var ev = event;
+            if(ev.keyCode==13) {
+                print();
+            }
+             if(ev.keyCode==27) {
+                document.getElementById("name").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
